@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# checks if there is no such file
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# checks if there is no such directory
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
