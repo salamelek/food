@@ -1,2 +1,12 @@
 RewriteEngine On
-RewriteRule ^(.*)$ index.php [QSA,L]
+DirectoryIndex views/index.php
+
+# Ignore requests for existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Only rewrite requests that do not include a file extension (e.g., PHP routes)
+RewriteRule ^([^\.]+)$ views/$1.php [L,QSA]
+
+# Custom 404 page
+ErrorDocument 404 /views/404.php

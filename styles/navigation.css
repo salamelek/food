@@ -1,0 +1,7 @@
+@import "variables.css";
+
+
+nav {
+    background-color: var(--green);
+    padding: 1em 2em;
+}

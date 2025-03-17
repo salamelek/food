@@ -9,14 +9,13 @@ ini_set('display_errors', 1);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food site</title>
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
-<?php require "./modules/navigation.php"; ?>
-
-<header>
-    <h1>Food site</h1>
-</header>
-
-<?php require './modules/footer.php'; ?>
+<?php require "../modules/navigation.php"; ?>
+<main>
+    <?php require "../modules/myRecipes.php"; ?>
+</main>
+<?php require '../modules/footer.php'; ?>
 </body>
 </html>

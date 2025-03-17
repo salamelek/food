@@ -1,0 +1,12 @@
+@import "variables.css";
+
+
+body {
+    margin: 0;
+    background-color: var(--yellow);
+}
+
+main {
+    margin: 0 auto;
+    max-width: 30em;
+}

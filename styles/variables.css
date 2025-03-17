@@ -1,0 +1,26 @@
+:root {
+    --green: #5bf89f;
+    --yellow: #d9f85b;
+    --orange: #f8b95b;
+    --red: #f8785b;
+}
+
+@font-face {
+    font-family: 'CuteFont';
+    src: url('../styles/fonts/cuteFont.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'CuteFont', cursive;
+}
+
+.border {
+    border: 2px solid #171717;
+    border-radius: 1em;
+}
+
+.textBoxPadding {
+    padding: 1em 2em;
+}
