@@ -2,7 +2,9 @@ function deleteRecipe(recipeId, elToDelete) {
     fetch("/actions/delete_recipe.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "id=" + recipeId
+        body: JSON.stringify({
+            id: recipeId
+        })
     }).then(response => {
         if (response.ok) {
             makeItDisappearNicely(elToDelete);
