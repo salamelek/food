@@ -1,20 +1,30 @@
 <?php
-// a nice temporary array :>
-$recipes = ["Toast s pašteto", "Pašta carbonara"];
-// $recipes = [];
+require "../actions/db_connect.php";
+
+try {
+    $stmt = $pdo->query("
+SELECT id, name, description FROM Recipes
+");
+
+    $recipes = $stmt->fetchAll();
+
+} catch (PDOException $e) {
+    echo "Error fetching recipes: " . $e->getMessage();
+    exit();
+}
 ?>
 
 <link rel="stylesheet" href="../assets/styles/style.css">
-<section id="myRecipes" class="border textbox-padding">
+<section id="myRecipes" class="textbox-padding">
     <div class="recipe-list-container">
         <h3>
             My recipes
         </h3>
 
-        <?php foreach($recipes as $recipe): ?>
+        <?php foreach($recipes as $key => $recipe): ?>
         <div class="recipe-list-preview border textbox-padding-small">
             <p class="no-margin">
-                <?= htmlspecialchars($recipe) ?>
+                <?= htmlspecialchars($recipe["name"]) ?>
             </p>
             <div class="options-container">
                 <div class="icon" title="Edit recipe" onclick="">
