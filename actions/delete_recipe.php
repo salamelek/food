@@ -1,12 +1,12 @@
 <?php
-require 'db_connect.php'; // Include your DB connection
+require 'db_connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
-    $id = intval($_POST['id']); // Convert to int to prevent injection
+    $id = intval($_POST['id']);
 
     $stmt = $pdo->prepare("
-DELETE FROM Recipes WHERE id = $id
-");
+        UPDATE Recipes SET deleted = 1 WHERE id = ?
+    ");
     if ($stmt->execute([$id])) {
         echo json_encode(["success" => true]);
     } else {

@@ -3,11 +3,10 @@ require "../actions/db_connect.php";
 
 try {
     $stmt = $pdo->query("
-SELECT id, name, description FROM Recipes
-");
-
+        SELECT id, name, description FROM Recipes
+        WHERE deleted = 0
+    ");
     $recipes = $stmt->fetchAll();
-
 } catch (PDOException $e) {
     echo "Error fetching recipes: " . $e->getMessage();
     exit();
@@ -30,7 +29,7 @@ SELECT id, name, description FROM Recipes
                 <div class="icon" title="Edit recipe" onclick="">
                     <img src="../assets/icons/pencil_icon.png" alt="pencil icon">
                 </div>
-                <div class="icon" title="Delete recipe" onclick="delete_recipe(2)">
+                <div class="icon" title="Delete recipe" onclick="deleteRecipe(<?= $recipe["id"] ?>)">
                     <img src="../assets/icons/trashcan_icon.png" alt="trashcan icon">
                 </div>
             </div>
