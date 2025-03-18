@@ -1,0 +1,13 @@
+.icon {
+    height: 1em;
+    transition-duration: var(--short-duration);
+}
+
+.icon img {
+    height: 100%;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    transition-duration: var(--short-duration);
+}

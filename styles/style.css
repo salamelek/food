@@ -1,8 +1,18 @@
+/* Import every file */
+@import "footer.css";
+@import "icons.css";
+@import "index.css";
+@import "myRecipes.css";
+@import "navigation.css";
+
+
 :root {
     --green: #5bf89f;
     --yellow: #d9f85b;
     --orange: #f8b95b;
     --red: #f8785b;
+
+    --short-duration: 0.1s;
 }
 
 @font-face {
@@ -21,6 +31,14 @@ body {
     border-radius: 1em;
 }
 
-.textBoxPadding {
+.textbox-padding {
     padding: 1em 2em;
+}
+
+.textbox-padding-small {
+    padding: 0.5em 1em;
+}
+
+.no-margin {
+    margin: 0;
 }

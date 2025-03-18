@@ -1,0 +1,30 @@
+.recipe-list-preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.recipe-list-preview:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.options-container div:not(:last-child) {
+    margin-right: 1em;
+}
+
+.recipe-list-container div.icon {
+    cursor: pointer;
+}
+
+.add-recipe-button {
+    width: max-content;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+}
