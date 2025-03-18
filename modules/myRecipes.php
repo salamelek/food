@@ -1,10 +1,10 @@
 <?php
 // a nice temporary array :>
-// $recipes = ["Toast s pašteto", "Pašta carbonara"];
-$recipes = [];
+$recipes = ["Toast s pašteto", "Pašta carbonara"];
+// $recipes = [];
 ?>
 
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../assets/styles/style.css">
 <section id="myRecipes" class="border textbox-padding">
     <div class="recipe-list-container">
         <h3>
@@ -20,7 +20,7 @@ $recipes = [];
                 <div class="icon" title="Edit recipe" onclick="">
                     <img src="../assets/icons/pencil_icon.png" alt="pencil icon">
                 </div>
-                <div class="icon" title="Delete recipe" onclick="">
+                <div class="icon" title="Delete recipe" onclick="delete_recipe(2)">
                     <img src="../assets/icons/trashcan_icon.png" alt="trashcan icon">
                 </div>
             </div>
@@ -36,3 +36,4 @@ $recipes = [];
         </div>
     </div>
 </section>
+<script src="../assets/scripts/delete_recipe.js"></script>

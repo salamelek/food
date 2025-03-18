@@ -1,7 +1,7 @@
 <?php
 ?>
 
-<link rel="stylesheet" href="../styles/footer.css">
+<link rel="stylesheet" href="../assets/styles/footer.css">
 <footer>
     <p>This is footer</p>
 </footer>

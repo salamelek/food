@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: 'CuteFont';
-    src: url('../styles/fonts/cuteFont.otf') format('opentype');
+    src: url('eFont.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
