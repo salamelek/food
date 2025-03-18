@@ -29,7 +29,7 @@ try {
                 <div class="icon" title="Edit recipe" onclick="">
                     <img src="../assets/icons/pencil_icon.png" alt="pencil icon">
                 </div>
-                <div class="icon" title="Delete recipe" onclick="deleteRecipe(<?= $recipe["id"] ?>)">
+                <div class="icon" title="Delete recipe" onclick="deleteRecipe(<?= $recipe["id"] ?>, this.closest('.recipe-list-preview'))">
                     <img src="../assets/icons/trashcan_icon.png" alt="trashcan icon">
                 </div>
             </div>

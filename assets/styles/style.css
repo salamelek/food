@@ -8,11 +8,12 @@
 
 :root {
     --green: #5bf89f;
-    --yellow: #d9f85b;
+    --yellow: #f8f05b;
     --orange: #f8b95b;
     --red: #f8785b;
 
     --short-duration: 0.1s;
+    --long-duration: 0.5s;
 }
 
 @font-face {
