@@ -1,7 +1,41 @@
 <?php
+$loggedIn = false;
+$username = "";
+
+if (isset($_SESSION['user_id'])) {
+    $username = $_SESSION['username'];
+    $loggedIn = true;
+}
 ?>
 
 <link rel="stylesheet" href="../assets/styles/navigation.css">
 <nav>
-    <p>This is navigation</p>
+    <div class="nav-container">
+        <div class="logo-container">
+            <img src="../assets/images/food_logo.png" alt="logo">
+<!--            <p>test</p>-->
+        </div>
+
+        <?php if ($loggedIn): ?>
+        <div>
+            <p>
+                Logged in as <?= $username ?>
+            </p>
+            <form action="../actions/log_out.php" method="POST">
+                <button type="submit">
+                    Log out
+                </button>
+            </form>
+        </div>
+        <?php else: ?>
+        <div class="login-logout-container">
+            <a href="login" class="border">
+                Log in
+            </a>
+            <a href="register" class="border">
+                Register
+            </a>
+        </div>
+        <?php endif; ?>
+    </div>
 </nav>

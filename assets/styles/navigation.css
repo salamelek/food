@@ -2,3 +2,42 @@ nav {
     background-color: var(--green);
     padding: 1em 2em;
 }
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    height: 3em;
+}
+
+.logo-container img {
+    height: 100%;
+}
+
+.login-logout-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.login-logout-container a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em;
+    border: 2px dashed black;
+    transition: var(--short-duration)
+}
+
+.login-logout-container a:hover {
+    box-shadow: 0 0.1em 0.5em;
+    transition: var(--short-duration)
+}
+
+.login-logout-container a:not(:last-child) {
+    margin-right: 0.5em;
+}
