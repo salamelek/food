@@ -2,7 +2,7 @@
 
 // Define routes
 $routes = [
-    '/' => 'index.php',
-    '/index' => 'index.php',
-    '/login' => 'login.php',
+    "/" => "index.php",
+    "/index" => "index.php",
+    "/login" => "login.php",
 ];

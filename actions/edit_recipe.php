@@ -3,14 +3,13 @@ require "db_connect.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405); // Method Not Allowed
-    echo json_encode(["success" => false, "error" => "Invalid request method"]);
+    echo json_encode(["success" => false, "message" => "Invalid request method"]);
     exit;
 }
 
-$data = json_decode(file_get_contents("php://input"), true);
-$id = intval($data["id"]);
-$name = htmlspecialchars($data["name"]);
-$description = htmlspecialchars($data['description']);
+$id = intval($_POST["id"]);
+$name = htmlspecialchars($_POST["name"]);
+$description = htmlspecialchars($_POST["description"]);
 
 $stmt = $pdo->prepare("
         UPDATE Recipes SET name = :name, description = :description

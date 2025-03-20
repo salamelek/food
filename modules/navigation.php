@@ -1,9 +1,11 @@
 <?php
+session_start();
+
 $loggedIn = false;
 $username = "";
 
-if (isset($_SESSION['user_id'])) {
-    $username = $_SESSION['username'];
+if (isset($_SESSION["username"])) {
+    $username = $_SESSION["username"];
     $loggedIn = true;
 }
 ?>

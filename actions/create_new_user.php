@@ -1,7 +1,6 @@
 <?php
 require "db_connect.php";
 
-// Check if the request is a POST
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405);
     echo json_encode(["success" => false, "message" => "Method not allowed."]);
@@ -24,8 +23,7 @@ if ($stmt->execute([
 ])) {
     // login the user
     session_start();
-    $_SESSION['username'] = $username;
-    $_SESSION['user_id'] = $pdo->lastInsertId();
+    $_SESSION["username"] = $username;
 
     echo json_encode(["success" => true, "redirect" => "/"]);
     exit;

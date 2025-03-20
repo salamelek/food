@@ -23,8 +23,7 @@ if ($stmt->execute(["username" => $username])) {
     if ($row && password_verify($password, $row["pswHash"])) {
         // login the user
         session_start();
-        $_SESSION['username'] = $username;
-        $_SESSION['user_id'] = $pdo->lastInsertId();
+        $_SESSION["username"] = $username;
 
         echo json_encode(["success" => true, "redirect" => "/"]);
     } else {

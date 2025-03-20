@@ -2,7 +2,7 @@
 require "../actions/db_connect.php";
 
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set("display_errors", 1);
 
 // fetch all usernames
 $usernames = [];
@@ -13,14 +13,11 @@ $stmt = $pdo->prepare("
 ");
 
 if (!$stmt->execute()) {
+    echo "Statement execution failed";
     exit;
 }
 
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-if (!$rows) {
-    exit;
-}
 
 foreach ($rows as $row) {
     $usernames[] = $row["username"];
@@ -67,7 +64,7 @@ foreach ($rows as $row) {
         </h5>
     </div>
 </main>
-<?php require '../modules/footer.php'; ?>
+<?php require "../modules/footer.php"; ?>
 </body>
 
 <script src="../assets/scripts/create_new_user.js"></script>

@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set("display_errors", 1);
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +40,7 @@ ini_set('display_errors', 1);
         </h5>
     </div>
 </main>
-<?php require '../modules/footer.php'; ?>
+<?php require "../modules/footer.php"; ?>
 </body>
 
 <script src="../assets/scripts/login.js"></script>

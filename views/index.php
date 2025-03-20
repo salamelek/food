@@ -1,12 +1,9 @@
 <?php
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set("display_errors", 1);
 
-
-session_start();
-
-if (isset($_SESSION['user_id'])) {
-    $username = $_SESSION['username'];
+if (isset($_SESSION["username"])) {
+    $username = $_SESSION["username"];
 }
 ?>
 
@@ -23,6 +20,6 @@ if (isset($_SESSION['user_id'])) {
 <main>
     <?php require "../modules/my-recipes.php"; ?>
 </main>
-<?php require '../modules/footer.php'; ?>
+<?php require "../modules/footer.php"; ?>
 </body>
 </html>

@@ -19,12 +19,12 @@
 }
 
 @font-face {
-    font-family: 'CuteFont';
-    src: url('fonts/cuteFont.otf') format('opentype');
+    font-family: "CuteFont";
+    src: url("fonts/cuteFont.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: 'CuteFont', cursive;
+    font-family: "CuteFont", cursive;
 }
