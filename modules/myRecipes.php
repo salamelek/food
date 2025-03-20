@@ -22,7 +22,7 @@ try {
 
         <?php foreach($recipes as $key => $recipe): ?>
         <div class="recipe-list-preview border textbox-padding-small">
-            <p class="no-margin">
+            <p class="m-0">
                 <?= htmlspecialchars($recipe["name"]) ?>
             </p>
             <div class="options-container">

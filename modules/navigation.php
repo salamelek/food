@@ -19,7 +19,7 @@ if (isset($_SESSION['user_id'])) {
 
         <?php if ($loggedIn): ?>
         <div>
-            <p>
+            <p class="mt-0">
                 Logged in as <?= $username ?>
             </p>
             <form action="../actions/log_out.php" method="POST">

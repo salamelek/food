@@ -46,8 +46,10 @@ foreach ($rows as $row) {
             placeholder="username"
             name="username"
             required
+            autocomplete="off"
             oninput='check_usernames(this.value, <?= json_encode($usernames) ?>)'
         ><br>
+        <p id="username-feedback"></p>
 
         <label for="password-input">Password:</label>
         <input

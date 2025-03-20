@@ -4,6 +4,8 @@
 @import "index.css";
 @import "myRecipes.css";
 @import "navigation.css";
+@import "register.css";
+@import "utils.css";
 
 
 :root {
@@ -25,21 +27,4 @@
 
 body {
     font-family: 'CuteFont', cursive;
-}
-
-.border {
-    border: 2px solid #171717;
-    border-radius: 1em;
-}
-
-.textbox-padding {
-    padding: 1em 2em;
-}
-
-.textbox-padding-small {
-    padding: 0.5em 1em;
-}
-
-.no-margin {
-    margin: 0;
 }
