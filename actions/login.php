@@ -30,8 +30,8 @@ if ($stmt->execute(["username" => $username])) {
     } else {
         echo json_encode(["success" => false, "message" => "Invalid username or password."]);
     }
-    exit;
 } else {
     http_response_code(500);
     echo json_encode(["success" => false, "message" => "Failed to create user."]);
 }
+exit;

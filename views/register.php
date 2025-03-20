@@ -1,6 +1,30 @@
 <?php
+require "../actions/db_connect.php";
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
+// fetch all usernames
+$usernames = [];
+
+$stmt = $pdo->prepare("
+    SELECT username
+    FROM Users
+");
+
+if (!$stmt->execute()) {
+    exit;
+}
+
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if (!$rows) {
+    exit;
+}
+
+foreach ($rows as $row) {
+    $usernames[] = $row["username"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +46,7 @@ ini_set('display_errors', 1);
             placeholder="username"
             name="username"
             required
+            oninput='check_usernames(this.value, <?= json_encode($usernames) ?>)'
         ><br>
 
         <label for="password-input">Password:</label>
@@ -44,5 +69,6 @@ ini_set('display_errors', 1);
 </body>
 
 <script src="../assets/scripts/create_new_user.js"></script>
+<script src="../assets/scripts/check_usernames.js"></script>
 
 </html>
