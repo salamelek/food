@@ -3,7 +3,8 @@ body {
     background-color: var(--yellow);
 }
 
-main {
+.container {
     margin: 0 auto;
     max-width: 30em;
+    padding: 2em;
 }

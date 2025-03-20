@@ -42,9 +42,11 @@ try {
         <p>No recipes yet! Click the button below to add some :></p>
         <?php endif; ?>
 
-        <div class="add-recipe-button icon border" title="Add recipe" onclick="">
-            <img src="../assets/icons/add_icon.png" alt="add icon">
-        </div>
+        <a href="/add-recipe">
+            <div class="add-recipe-button icon border" title="Add recipe">
+                <img src="../assets/icons/add_icon.png" alt="add icon">
+            </div>
+        </a>
     </div>
 </section>
 <script src="../assets/scripts/delete_recipe.js"></script>

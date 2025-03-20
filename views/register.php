@@ -1,27 +1,11 @@
 <?php
 require "../actions/db_connect.php";
+require "../actions/fetch_usernames.php";
 
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-// fetch all usernames
-$usernames = [];
 
-$stmt = $pdo->prepare("
-    SELECT username
-    FROM Users
-");
-
-if (!$stmt->execute()) {
-    echo "Statement execution failed";
-    exit;
-}
-
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-foreach ($rows as $row) {
-    $usernames[] = $row["username"];
-}
 ?>
 
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 /* Import every file */
 @import "footer.css";
 @import "icons.css";
-@import "index.css";
+@import "globals.css";
 @import "myRecipes.css";
 @import "navigation.css";
 @import "register.css";
@@ -26,5 +26,5 @@
 }
 
 body {
-    font-family: "CuteFont", cursive;
+    font-family: "CuteFont", sans-serif;
 }
