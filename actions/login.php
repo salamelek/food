@@ -13,7 +13,7 @@ $password = htmlspecialchars($_POST["password"]);
 
 // Fetch the password hash
 $stmt = $pdo->prepare("
-    SELECT password FROM users
+    SELECT pswHash FROM users
     WHERE username = :username
 ");
 

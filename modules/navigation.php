@@ -12,8 +12,9 @@ if (isset($_SESSION['user_id'])) {
 <nav>
     <div class="nav-container">
         <div class="logo-container">
-            <img src="../assets/images/food_logo.png" alt="logo">
-<!--            <p>test</p>-->
+            <a href="/">
+                <img src="../assets/images/food_logo.png" alt="logo">
+            </a>
         </div>
 
         <?php if ($loggedIn): ?>
