@@ -20,7 +20,7 @@ include "../actions/fetch_recipe_by_id.php";
                 No recipe with that ID!
             </h3>
         <?php else: ?>
-            <h3 class="mt-0">
+            <h3>
                 Editing: <?= $recipeName ?>
             </h3>
             <form onsubmit="edit_recipe(event, this)">

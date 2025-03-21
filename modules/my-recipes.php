@@ -14,7 +14,7 @@ try {
 ?>
 
 <link rel="stylesheet" href="../assets/styles/style.css">
-<section id="myRecipes" class="textbox-padding">
+<section id="myRecipes" class="container">
     <div class="recipe-list-container">
         <h3>
             My recipes
@@ -22,7 +22,7 @@ try {
 
         <?php foreach($recipes as $key => $recipe): ?>
         <div
-            class="recipe-list-preview border textbox-padding-small"
+            class="recipe-list-preview border"
             onclick="view_recipe(event, <?= $recipe["id"] ?>)"
         >
             <p class="m-0">
@@ -45,11 +45,11 @@ try {
         <p>No recipes yet! Click the button below to add some :></p>
         <?php endif; ?>
 
-        <a href="/add-recipe">
-            <div class="add-recipe-button icon border" title="Add recipe">
+        <div class="add-recipe-button icon border" title="Add recipe">
+            <a href="/add-recipe">
                 <img src="../assets/icons/add_icon.png" alt="add icon">
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
 </section>
 

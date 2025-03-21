@@ -3,10 +3,17 @@
     flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
+    padding: 0.5em 1em;
+    transition: var(--short-duration);
 }
 
 .recipe-list-preview:not(:last-child) {
     margin-bottom: 0.5em;
+}
+
+.recipe-list-preview:hover {
+    transform: scaleY(1.2) scaleX(1.02);
+    transition: var(--short-duration);
 }
 
 .options-container {

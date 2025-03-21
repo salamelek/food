@@ -25,17 +25,17 @@ if (isset($_SESSION["username"])) {
                 Logged in as <?= $username ?>
             </p>
             <form action="../actions/log_out.php" method="POST">
-                <button type="submit">
+                <button type="submit" class="dashed-button">
                     Log out
                 </button>
             </form>
         </div>
         <?php else: ?>
         <div class="login-logout-container">
-            <a href="login" class="border">
+            <a href="login" class="dashed-button">
                 Log in
             </a>
-            <a href="register" class="border">
+            <a href="register" class="dashed-button">
                 Register
             </a>
         </div>

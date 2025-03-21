@@ -25,19 +25,21 @@ nav {
     justify-content: space-around;
 }
 
-.login-logout-container a {
+.dashed-button {
     text-decoration: none;
     color: black;
     padding: 0.5em 1em;
     border: 2px dashed black;
+    border-radius: 2em;
+    background-color: unset;
     transition: var(--short-duration)
 }
 
-.login-logout-container a:hover {
+.dashed-button:hover {
     box-shadow: 0 0.1em 0.5em;
     transition: var(--short-duration)
 }
 
-.login-logout-container a:not(:last-child) {
+.dashed-button:not(:last-child) {
     margin-right: 0.5em;
 }
