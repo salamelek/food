@@ -21,7 +21,10 @@ try {
         </h3>
 
         <?php foreach($recipes as $key => $recipe): ?>
-        <div class="recipe-list-preview border textbox-padding-small">
+        <div
+            class="recipe-list-preview border textbox-padding-small"
+            onclick="view_recipe(event, <?= $recipe["id"] ?>)"
+        >
             <p class="m-0">
                 <?= htmlspecialchars($recipe["name"]) ?>
             </p>
@@ -49,4 +52,6 @@ try {
         </a>
     </div>
 </section>
+
 <script src="../assets/scripts/delete_recipe.js"></script>
+<script src="../assets/scripts/view_recipe.js"></script>
