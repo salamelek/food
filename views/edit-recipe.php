@@ -52,6 +52,7 @@ if ($recipe) {
             id="recipe-name"
             name="name"
             value="<?= $recipeName ?>"
+            required
         ><br>
 
         <label for="recipe-description">Description:</label><br>
@@ -60,6 +61,7 @@ if ($recipe) {
             id="recipe-description"
             cols="30"
             rows="10"
+            required
         ><?= $recipeDescription ?></textarea><br>
 
         <input type="submit" value="Done">

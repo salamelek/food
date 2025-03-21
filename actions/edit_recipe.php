@@ -12,7 +12,8 @@ $name = htmlspecialchars($_POST["name"]);
 $description = htmlspecialchars($_POST["description"]);
 
 $stmt = $pdo->prepare("
-        UPDATE Recipes SET name = :name, description = :description
+        UPDATE Recipes
+        SET name = :name, description = :description
         WHERE id = :id
     ");
 
@@ -22,7 +23,7 @@ if ($stmt->execute([
     "description" => $description,
 ])) {
     http_response_code(200);
-    echo json_encode(["success" => true]);
+    echo json_encode(["success" => true, "redirect" => "/"]);
 } else {
     http_response_code(500);
     echo json_encode(["success" => false, "error" => "Failed to update record"]);

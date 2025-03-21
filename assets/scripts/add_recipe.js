@@ -19,6 +19,8 @@ async function add_recipe(event, form) {
         if (data.success) {
             messageElement.textContent = "Recipe created successfully :D";
             messageElement.style.color = "green";
+
+            window.location.href = data.redirect;
         } else {
             messageElement.textContent = "Failed to create recipe: " + data.message;
             messageElement.style.color = "red";

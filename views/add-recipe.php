@@ -1,5 +1,4 @@
 <?php
-include "../actions/db_connect.php";
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +22,8 @@ include "../actions/db_connect.php";
                 type="text"
                 id="recipe-name"
                 name="name"
+                autocomplete="off"
+                required
             ><br>
 
             <label for="recipe-description">Description:</label><br>
@@ -31,6 +32,7 @@ include "../actions/db_connect.php";
                 id="recipe-description"
                 cols="30"
                 rows="10"
+                required
             ></textarea><br>
 
             <input type="submit" value="Done">
@@ -41,6 +43,6 @@ include "../actions/db_connect.php";
 <?php require "../modules/footer.php"; ?>
 </body>
 
-<script src="../assets/scripts/edit_recipe.js"></script>
+<script src="../assets/scripts/add_recipe.js"></script>
 
 </html>

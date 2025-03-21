@@ -19,6 +19,8 @@ async function edit_recipe(event, form) {
         if (data.success) {
             messageElement.textContent = "Recipe updated successfully";
             messageElement.style.color = "green";
+
+            window.location.href = data.redirect;
         } else {
             messageElement.textContent = "Failed to update recipe: " + data.message;
             messageElement.style.color = "red";
