@@ -43,3 +43,23 @@ nav {
 .dashed-button:not(:last-child) {
     margin-right: 0.5em;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+    .logo-container img {
+        animation: happy-logo infinite 1s linear;
+    }
+}
+
+@keyframes happy-logo {
+    from {
+        transform: rotate(-13deg) translateX(-5%);
+    }
+
+    50% {
+        transform: rotate(0deg) translateX(5%);
+    }
+
+    to {
+        transform: rotate(-13deg) translateX(-5%);
+    }
+}
