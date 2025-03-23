@@ -23,8 +23,8 @@ include "../actions/fetch_recipe_by_id.php";
             <h3>
                 <?= $recipeName ?>
             </h3>
-            <p>
-                <?= $recipeDescription ?>
+            <p class="display-recipe-description">
+                <?= nl2br(htmlspecialchars_decode($recipeDescription)) ?>
             </p>
         </div>
     <?php endif; ?>

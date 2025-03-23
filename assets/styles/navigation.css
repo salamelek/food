@@ -16,6 +16,7 @@ nav {
 
 .logo-container img {
     height: 100%;
+    animation: happy-logo infinite 1s linear;
 }
 
 .login-logout-container {
@@ -42,12 +43,6 @@ nav {
 
 .dashed-button:not(:last-child) {
     margin-right: 0.5em;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .logo-container img {
-        animation: happy-logo infinite 1s linear;
-    }
 }
 
 @keyframes happy-logo {

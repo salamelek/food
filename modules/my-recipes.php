@@ -45,11 +45,11 @@ try {
         <p>No recipes yet! Click the button below to add some :></p>
         <?php endif; ?>
 
-        <div class="add-recipe-button icon border" title="Add recipe">
-            <a href="/add-recipe">
+        <a href="/add-recipe">
+            <div class="add-recipe-button icon border" title="Add recipe">
                 <img src="../assets/icons/add_icon.png" alt="add icon">
-            </a>
-        </div>
+            </div>
+        </a>
     </div>
 </section>
 
